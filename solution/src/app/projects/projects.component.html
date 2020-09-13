@@ -1,0 +1,48 @@
+<div style="width: 85%; margin-right: auto; margin-left: auto;">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Search</mat-label>
+            <span matPrefix>
+                <mat-icon>search</mat-icon>
+            </span>
+            <input type="text" matInput placeholder="Search" style="color: black;">
+        </mat-form-field>
+    </form>
+</div>
+
+<div class="cardList" fxLayout="column" fxLayoutGap="0px" fxLayout.xs="column">
+
+
+    <mat-card style="box-shadow: none !important;" style="width: 80%;">
+        <mat-card-header>
+            <mat-card-title style="font-size: 14px; font-weight: 500; line-height: 21px;"><span
+                    style="margin-right: 5px;"><a href="#">0 Open</a></span> <span><a href="#">0 Closed</a></span>
+            </mat-card-title>
+            <span class="spacer"></span>
+            <button [matMenuTriggerFor]="sortMenu" aria-label="Example icon-button with a menu" style="margin-left: 10px;">
+                sort by
+            </button>
+            <mat-menu #sortMenu="matMenu">
+                <button mat-menu-item>
+                    <span>Newest</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Oldest</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Recently Updated</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Least Recently Updated</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Name</span>
+                </button>
+            </mat-menu>
+        </mat-card-header>
+
+        <mat-card-content style="justify-content: center; font-size: 20px; font-weight: 500; line-height: 30px;">
+            <p>{{userProfile?.login}} doesn't have any projects yet.</p>
+        </mat-card-content>
+    </mat-card>
+</div>

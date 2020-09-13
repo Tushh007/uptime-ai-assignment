@@ -1,0 +1,18 @@
+.cardList {
+    align-items: center;
+    justify-content: center;
+}
+
+mat-card {
+    height: auto;
+    width: 18rem;
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+    background-color:#FAFAFA;
+}
+
+mat-card-header {
+    justify-content: center;
+    color: rgb(53, 84, 112);
+}

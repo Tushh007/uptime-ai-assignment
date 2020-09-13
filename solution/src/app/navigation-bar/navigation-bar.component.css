@@ -1,0 +1,75 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 350px;
+  border-style: none;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  background-color: #24292e;
+  color: #cfd0d1;
+  overflow: hidden;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #24292e;
+}
+
+mat-nav-list.horizontal-list {
+  display: flex;
+  flex-direction: row;
+}
+
+mat-nav-list.horizontal-list .mat-list-item {
+  color: white;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+input[type=text] {
+  width: 200px;
+  height: 60%;
+  box-sizing: border-box;
+  border: 2px solid #404448;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #404448;
+  /* background-image: url('searchicon.png'); */
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  color:  #cfd0d1;
+}
+
+img {
+  border-radius: 50%;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foll-sta {
+  font-size: 14px; 
+  line-height: 21px; 
+  margin: 5px;
+}
+mat-icon {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+mat-card {
+  background-color: #FAFAFA;
+}

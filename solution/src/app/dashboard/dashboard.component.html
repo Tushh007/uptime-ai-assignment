@@ -1,0 +1,30 @@
+<mat-tab-group animationDuration="0ms">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span style="margin-left: 5px;">Overview</span>
+        </ng-template>
+        <app-overview></app-overview>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>pages</mat-icon>
+            <span style="margin-left: 5px;">Repositories</span>
+        </ng-template>
+        <app-repositories></app-repositories>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>poll</mat-icon>
+            <span style="margin-left: 5px;">Projects</span>
+        </ng-template>
+        <app-projects></app-projects>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>collections_bookmark</mat-icon>
+            <span style="margin-left: 5px;">Packages</span>
+        </ng-template>
+        <app-packages></app-packages>
+    </mat-tab>
+  </mat-tab-group>

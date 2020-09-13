@@ -1,0 +1,40 @@
+.cardList {
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card {
+  height: auto;
+  width: 18rem;
+  margin: 2rem;
+  justify-content: center;
+  text-align: center;
+  background-color: #fafafa;
+  box-shadow: none;
+}
+
+mat-card-header {
+  /* justify-content: center; */
+  color: rgb(53, 84, 112);
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 60%;
+  box-sizing: border-box;
+  /* border: 2px solid #404448; */
+  border-radius: 15px;
+  font-size: 16px;
+  /* background-color: #404448; */
+  /* background-image: url('searchicon.png'); */
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  color: #cfd0d1;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
