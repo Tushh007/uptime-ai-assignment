@@ -5,25 +5,31 @@ import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { User } from '../shared/models/user';
 import { GithubService } from '../shared/services/github.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.css']
+  styleUrls: ['./overview.component.css'],
+  providers: [DatePipe]
 })
 export class OverviewComponent implements OnInit, OnDestroy {
   userProfile: User;
   userSubscription: Subscription;
   userRepoData = [];
+  graphUrl: string;
+  dataUrl: string;
 
   dataSource: any;
   displayedColumns: string[] = ['url'];
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  constructor(private githubService: GithubService) {
+  constructor(private githubService: GithubService, private datePipe: DatePipe) {
     this.userSubscription = this.githubService.currentUser.subscribe(x => {
       this.userProfile = x;
+      this.dataUrl = '/' + this.userProfile.login;
+      this.graphUrl = `/users/${this.userProfile.login}/contributions?to=${this.datePipe.transform(new Date(), 'yyyy-MM-dd')}`;
       this.getRepos(this.userProfile.login);
     });
   }

@@ -28,24 +28,10 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-      // this.getUserProfile('erossignon');
       this.githubService.getUserProfile('erossignon');
     }
 
     ngOnDestroy(): void {
       this.userSubscription.unsubscribe();
     }
-
-  // getUserProfile(username: string): void {
-  //   this.githubService.getUserProfile(username)
-  //         .pipe(first())
-  //         .subscribe(
-  //           data => {
-  //             this.userProfile = data;
-  //           },
-  //           error => {
-  //             // console.log(error);
-  //           });
-  // }
-
 }
