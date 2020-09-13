@@ -1,1 +1,32 @@
-<p>overview works!</p>
+<div>
+    <p style="font-size: 16px; font-weight: 400; line-height: 24px; margin-top: 24px;">Popular Repositories</p>
+</div>
+<div class="cardList" fxLayout="row wrap" fxLayoutGap="32px" fxLayout.xs="column">
+    <mat-card style="width: 40%; height: 60%;" *ngFor="let repo of userRepoData | slice: 0:6;">
+        <mat-card-content>
+            <div class="repo-details">
+                <span id="repo-name">
+                    <a href="#" style="font-size: 20px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    color: rgb(3, 102, 214);
+                    margin-bottom: 8px;">{{repo.name}} </a>
+                </span> <br>
+
+                <!-- <span *ngIf='repo.fork' class="fork-data">
+                    Forked from <a href="#">{{repo.full_name}}</a>
+                </span> <br> -->
+
+                <span *ngIf='repo.description' class="repo-desc" style="margin-top: 200px">
+                    {{ repo.description }}
+                </span> <br>
+
+                <span class="repo-more-details">
+                    <span *ngIf='repo.language'>{{ repo.language }}</span> <span
+                        *ngIf='repo.license'>{{repo.license?.name}}</span> <span *ngIf='repo.pushed_at'>Updated at
+                        {{repo.pushed_at | date}}</span>
+                </span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

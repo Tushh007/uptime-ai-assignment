@@ -50,7 +50,6 @@ export class RepositoriesComponent implements OnInit, OnDestroy {
       .subscribe(
         userRepoData => {
           this.userRepoData = userRepoData;
-          console.log(this.userRepoData);
           this.dataSource = new MatTableDataSource(this.userRepoData);
           this.dataSource.paginator = this.paginator;
         },

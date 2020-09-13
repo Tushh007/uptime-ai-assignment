@@ -1,0 +1,56 @@
+.cardList {
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card {
+  height: auto;
+  width: 18rem;
+  margin: 2rem;
+  border: 1px solid rgb(225, 228, 232);
+  box-shadow: none !important;
+  /* justify-content: center;
+    text-align: center; */
+  /* border-style: solid;
+  border-color: rgb(225, 228, 232); */
+  background-color: #fafafa;
+}
+/* 
+mat-card-header {
+    justify-content: center;
+    color: rgb(53, 84, 112);
+} */
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.fork-data {
+  color: rgb(88, 96, 105);
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+
+.fork-desc {
+    color: rgb(88, 96, 105);
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 8px;
+  }
+  
+  .repo-more-details {
+    color: rgb(88, 96, 105);
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .repo-more-details span {
+    margin-right: 10px;
+  }
+  

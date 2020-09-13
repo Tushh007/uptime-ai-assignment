@@ -87,3 +87,9 @@ a:hover {
 mat-paginator {
     background-color: #FAFAFA;
 }
+
+mat-icon {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
