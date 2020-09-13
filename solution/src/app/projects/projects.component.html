@@ -1,13 +1,8 @@
 <div style="width: 85%; margin-right: auto; margin-left: auto;">
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
-            <mat-label>Search</mat-label>
-            <span matPrefix>
-                <mat-icon>search</mat-icon>
-            </span>
-            <input type="text" matInput placeholder="Search" style="color: black;">
-        </mat-form-field>
-    </form>
+    <mat-form-field style="width: 20%;">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex. AccessiDys" #input>
+    </mat-form-field>
 </div>
 
 <div class="cardList" fxLayout="column" fxLayoutGap="0px" fxLayout.xs="column">
@@ -19,7 +14,7 @@
                     style="margin-right: 5px;"><a href="#">0 Open</a></span> <span><a href="#">0 Closed</a></span>
             </mat-card-title>
             <span class="spacer"></span>
-            <button [matMenuTriggerFor]="sortMenu" aria-label="Example icon-button with a menu" style="margin-left: 10px;">
+            <button [matMenuTriggerFor]="sortMenu" aria-label="Example icon-button with a menu" style="margin-left: 10px;" class="btn">
                 sort by
             </button>
             <mat-menu #sortMenu="matMenu">

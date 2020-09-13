@@ -24,6 +24,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { OverviewComponent } from './overview/overview.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MatTableModule } from '@angular/material/table';
     HttpClientModule,
     MatCardModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

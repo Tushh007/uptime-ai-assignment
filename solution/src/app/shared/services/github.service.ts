@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { User } from '../models/user'
+import { User } from '../models/user';
+import { Repository } from '../models/repository';
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +26,9 @@ export class GithubService {
       localStorage.setItem('currentUser', JSON.stringify(userData));
     });
   }
+
+  getUserRepo(username: string): any {
+    return this.http.get<User>(`https://api.github.com/users/${username}/repos`);
+  }
+
 }
